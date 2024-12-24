@@ -50,3 +50,16 @@ O projeto do site da Escola Barão de Jundiaí visa criar uma experiência onlin
 | **Git e GitHub** | Controle de versão e colaboração  |
 
 > Futuramente, o projeto pode incluir frameworks como React ou bibliotecas de estilo como Bootstrap.
+
+🔗 Links Úteis
+Repositório do Projeto: GitHub
+Site da Escola Barão de Jundiaí: www.escolabaraodejundiai.com
+Contato dos Desenvolvedores: Seu Nome, Pedro
+
+📝 Licença
+Este projeto é de uso interno e educativo, criado exclusivamente para a Escola Barão de Jundiaí. Todos os direitos reservados.
+
+👥 Desenvolvedores
+Seu Nome
+Pedro
+

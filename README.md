@@ -51,9 +51,13 @@ O projeto do site da Escola Barão de Jundiaí visa criar uma experiência onlin
 
 > Futuramente, o projeto pode incluir frameworks como React ou bibliotecas de estilo como Bootstrap.
 
+---
+
 ## 📝 Licença
 
 Este projeto é de uso interno e educativo, criado exclusivamente para a Escola Barão de Jundiaí. Todos os direitos reservados.
+
+---
 
 ## 👥 Desenvolvedores
 

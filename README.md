@@ -1,12 +1,12 @@
 # 🏫 Site da Escola PEI Barão de Jundiaí
 
-Bem-vindo ao repositório do projeto do site oficial da **Escola Barão de Jundiaí**. Este site está sendo desenvolvido por [Nathan](https://github.com/pJayaFps) e [Pedro](https://github.com/Magcizz), com o objetivo de oferecer uma plataforma digital moderna e informativa para a comunidade escolar.
+Bem-vindo ao repositório do projeto do site oficial da **Escola PEI Barão de Jundiaí**. Este site está sendo desenvolvido por [Nathan](https://github.com/pJayaFps) e [Pedro](https://github.com/Magcizz), com o objetivo de oferecer uma plataforma digital moderna e informativa para a comunidade escolar.
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O projeto do site da Escola Barão de Jundiaí visa criar uma experiência online que conecte pais, alunos, professores e a administração escolar. A proposta é desenvolver um ambiente funcional, de fácil acesso, com recursos úteis e design intuitivo.
+O projeto do site da Escola PEI Barão de Jundiaí visa criar uma experiência online que conecte pais, alunos, professores e a administração escolar. A proposta é desenvolver um ambiente funcional, de fácil acesso, com recursos úteis e design intuitivo.
 
 > ⚠️ **Status do Projeto**: Em desenvolvimento...
 
@@ -55,7 +55,7 @@ O projeto do site da Escola Barão de Jundiaí visa criar uma experiência onlin
 
 ## 📝 Licença
 
-Este projeto é de uso interno e educativo, criado exclusivamente para a Escola Barão de Jundiaí. Todos os direitos reservados.
+Este projeto é de uso interno e educativo, criado exclusivamente para a Escola PEI Barão de Jundiaí. Todos os direitos reservados.
 
 ---
 

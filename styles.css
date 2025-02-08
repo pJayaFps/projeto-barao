@@ -35,17 +35,6 @@
     background-color: var(--white);
     font-weight: 700;
   }
-
-  .inicio {
-    transition: var(--tran-04);
-  }
-
-  .inicio:hover {
-    background-color: #6695ec8e;
-    padding: 1px;
-    border-radius: 10px;
-    z-index: 1;
-  }
   
   .logo1 {
     width: 110px;
@@ -62,6 +51,11 @@
   .menu li a {
     text-decoration: none;
     color: #000;
+    transition: var(--tran-04);
+  }
+
+  .menu li a:hover {
+    color: #6db8f5;
   }
   
   .menu .button {

@@ -15,16 +15,38 @@
 
 <body>
     <header>
-        <img src="../img/logo.jpeg" alt="" class="logo1">
-        <nav>
-            <ul class="menu">
-                <li class="inicio"><a href="#">Nossa Escola</a></li>
-                <li><a href="#">Áreas</a></li>
-                <li><a href="#">Calendário</a></li>
-                <li><a href="#">Portal Do Aluno</a></li>
-                <li><a href="#">Parcerias</a></li>
-            </ul>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/logobaraobranco.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Nossa Escola</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Áreas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calendário</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Portal do Aluno</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Parcerias</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/menu_white_36dp.svg" alt=""></button>
+            </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
     </header>
     <main>
         <!-- BLOCO 1 -->
@@ -271,6 +293,7 @@
             </div>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

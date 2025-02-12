@@ -148,7 +148,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {   
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -240,7 +240,7 @@
   .hero-content {
     max-width: 50%;
     margin-left: 100px;
-    margin-top: -40px;
+    margin-top: 0px;
   }
   
   .hero-content h1 {
@@ -263,6 +263,7 @@
     font-weight: bold;
     border-radius: 50px;
     margin-left: -50px;
+    font-size: 20px;
     margin-bottom: 100px;
     transition: var(--tran-02);
   }
@@ -270,7 +271,7 @@
   .hero-image {
     position: relative; /* Torna o contêiner relativo para controlar o posicionamento dos filhos */
     display: inline-block; /* Mantém o contêiner ajustado ao tamanho do conteúdo */
-    margin-left: -100px;
+    margin-left: 0px;
   }
   
   .hero-image .background {
@@ -726,5 +727,168 @@ footer {
   #footer_content {
       grid-template-columns: repeat(1, 1fr);
       padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1130px) { 
+  .hero {
+    width: 1000px;
+  }
+
+  .hero-content {
+    max-width: 50%;
+    margin-left: 100px;
+    margin-top: 0px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.4em;
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+  
+  .hero-content p {
+    font-size: 1em;
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+  
+  .cta-button {
+    background-color: var(--principal2);
+    color: var(--white);
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-left: -50px;
+    margin-bottom: 100px;
+    transition: var(--tran-02);
+  }
+
+  .hero-image {
+    position: relative; /* Torna o contêiner relativo para controlar o posicionamento dos filhos */
+    display: inline-block; /* Mantém o contêiner ajustado ao tamanho do conteúdo */
+    margin-left: 0px;
+  }
+
+}
+
+@media screen and (max-width: 1000px) { 
+  .hero {
+    width: 800px;
+    height: 408px;
+  }
+
+  .hero-content {
+    max-width: 50%;
+    margin-left: 100px;
+    margin-top: 0px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+  
+  .hero-content p {
+    font-size: 0.8em;
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+  
+  .cta-button {
+    background-color: var(--principal2);
+    color: var(--white);
+    padding: 10px 50px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-left: -50px;
+    font-size: 14px;
+    margin-bottom: 100px;
+    transition: var(--tran-02);
+  }
+
+  .hero-image {
+    position: relative; /* Torna o contêiner relativo para controlar o posicionamento dos filhos */
+    display: inline-block; /* Mantém o contêiner ajustado ao tamanho do conteúdo */
+    margin-left: 0px;
+  }
+
+  .hero-image .background {
+    position: absolute; /* Posiciona a imagem decorativa em relação ao contêiner */
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 90%; /* Ajuste o tamanho para ser maior que a imagem principal */
+    z-index: 1; /* Coloca a imagem amarela no fundo */
+  }
+  
+  .hero-image .foreground {
+    position: relative; /* Garante que a imagem principal esteja sobre a decoração */
+    z-index: 2; /* Coloca a imagem principal na frente */
+    width: 400px;
+    border-radius: 10px; /* Bordas arredondadas na imagem principal (opcional) */
+    top: 7px;
+  }
+}
+
+@media screen and (max-width: 720px) { 
+  .hero {
+    width: 600px;
+    height: 308px;
+  }
+
+  .hero-content {
+    max-width: 50%;
+    margin-left: 100px;
+    margin-top: 0px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1em;
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+  
+  .hero-content p {
+    font-size: 0.5em;
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+  
+  .cta-button {
+    background-color: var(--principal2);
+    color: var(--white);
+    padding: 5px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-left: -50px;
+    margin-bottom: 100px;
+    transition: var(--tran-02);
+    font-size: 10px;
+  }
+
+  .hero-image {
+    position: relative; /* Torna o contêiner relativo para controlar o posicionamento dos filhos */
+    display: inline-block; /* Mantém o contêiner ajustado ao tamanho do conteúdo */
+    margin-left: 0px;
+  }
+
+  .hero-image .background {
+    position: absolute; /* Posiciona a imagem decorativa em relação ao contêiner */
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 90%; /* Ajuste o tamanho para ser maior que a imagem principal */
+    z-index: 1; /* Coloca a imagem amarela no fundo */
+  }
+  
+  .hero-image .foreground {
+    position: relative; /* Garante que a imagem principal esteja sobre a decoração */
+    z-index: 2; /* Coloca a imagem principal na frente */
+    width: 300px;
+    border-radius: 10px; /* Bordas arredondadas na imagem principal (opcional) */
+    top: 7px;
   }
 }

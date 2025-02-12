@@ -111,7 +111,7 @@
     display: none;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 1000px) {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -129,10 +129,12 @@
         border: none;
         cursor: pointer;
     }
+
     .mobile-menu ul {
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin-top: -90px;
         padding-bottom: 1rem;
     }
     .mobile-menu .nav-item {
@@ -145,9 +147,11 @@
     }
     .mobile-menu .login-button button {
         width: 100%;
+        margin-bottom: 20px;
     }
     .open {
         display: block;
+        margin-bottom: 60px;
     }
 }
   

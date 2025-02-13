@@ -1,0 +1,5 @@
+# Ativar a reescrita de URLs
+RewriteEngine On
+
+# Criar URL amigável para a página de "Fale Conosco"
+RewriteRule ^fale-conosco$ faleconosco.html [L]

@@ -1,50 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale Conosco - PEI Barão de Jundiaí</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        select {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="styless.css">
 </head>
+
 <body>
-    <div class="container">
-        <h2>Fale Conosco</h2>
-        <form action="processa_form.php" method="post">
-            <label for="motivo">*Motivo Principal da Mensagem:</label>
-            <select name="motivo" id="motivo" required>
-                <option value="">-</option>
-                <option value="Crítica">Crítica</option>
-                <option value="Solicitação">Solicitação</option>
-                <option value="Dúvida">Dúvida</option>
-                <option value="Sugestão">Sugestão</option>
-                <option value="Elogio">Elogio</option>
-            </select>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/logobaraobranco.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Nossa Escola</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Áreas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calendário</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Portal do Aluno</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="parcerias">Parcerias</a>
+                        <div class="box" id="box">
+                            <a href="cijun.html" target="_blank">Cijun</a>
+                            <a href="simens.html" target="_blank">Simens</a>
+                        </div>
+                    </li>
 
-            <label for="assunto">*Assunto:</label>
-            <input type="text" id="assunto" name="assunto" required>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#formulario">Fale Conosco</a></button>
+            </div>
 
-            <label for="mensagem">*Texto:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
 
-            <label for="nome">*Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <div class="login-button">
+                <button><a href="#">Fale Conosco</a></button>
+            </div>
+        </div>
+    </header>
+    <h2>Fale Conosco</h2>
+    
+    <section>
+        <div class="container">
+            
+            <form action="processa_form.php" method="post">
+                <label for="motivo">*Motivo Principal da Mensagem:</label>
+                <select name="motivo" id="motivo" required>
+                    <option value="">-</option>
+                    <option value="Crítica">Crítica</option>
+                    <option value="Solicitação">Solicitação</option>
+                    <option value="Dúvida">Dúvida</option>
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Elogio">Elogio</option>
+                </select>
 
-            <label for="email">*E-mail:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="assunto">*Assunto:</label>
+                <select name="motivo" id="motivo" required>
+                    <option value="">-</option>
+                    <option value="Crítica">Crítica</option>
+                    <option value="Solicitação">Solicitação</option>
+                    <option value="Dúvida">Dúvida</option>
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Elogio">Elogio</option>
+                </select>
 
-            <label>Autoriza um contato telefônico?</label>
-            <input type="radio" id="sim" name="contato" value="Sim"> Sim
-            <input type="radio" id="nao" name="contato" value="Não" checked> Não
+                <label for="mensagem">*Texto:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui o texto" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+                <label for="nome">*Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">*E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

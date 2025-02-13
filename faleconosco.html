@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - PEI Barão de Jundiaí</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fale Conosco</h2>
+        <form action="processa_form.php" method="post">
+            <label for="motivo">*Motivo Principal da Mensagem:</label>
+            <select name="motivo" id="motivo" required>
+                <option value="">-</option>
+                <option value="Crítica">Crítica</option>
+                <option value="Solicitação">Solicitação</option>
+                <option value="Dúvida">Dúvida</option>
+                <option value="Sugestão">Sugestão</option>
+                <option value="Elogio">Elogio</option>
+            </select>
+
+            <label for="assunto">*Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+
+            <label for="mensagem">*Texto:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <label for="nome">*Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">*E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Autoriza um contato telefônico?</label>
+            <input type="radio" id="sim" name="contato" value="Sim"> Sim
+            <input type="radio" id="nao" name="contato" value="Não" checked> Não
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

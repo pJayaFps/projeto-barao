@@ -131,6 +131,18 @@ header {
     display: none;
 }
 
+.mobile-menu-icon button {
+  margin-top: 5px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: var(--tran-04);
+}
+
+.mobile-menu-icon button:hover {
+  background-color: var(--home);
+}
+
+
 .mobile-menu {
     display: none;
 }
@@ -348,7 +360,7 @@ footer {
   }
   
   #facebook {
-    background-color: #4267b3;
+    background-color: #b34242;
   }
   
   #whatsapp {

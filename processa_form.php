@@ -1,4 +1,4 @@
-<!-- Arquivo PHP para processar os dados -->
+<!-- Arquivo PHP para processar os dados: e019732a@educacao.sp.gov.br -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $motivo = $_POST['motivo'];
@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $contato = $_POST['contato'];
 
-    $to = "emaildaescola@dominio.com";
+    $to = "tanziiinff@gmail.com"; 
     $subject = "Nova mensagem de Fale Conosco";
     $body = "Nome: $nome\nE-mail: $email\nMotivo: $motivo\nAssunto: $assunto\nMensagem: $mensagem\nContato telefônico: $contato";
     $headers = "From: $email";

@@ -71,7 +71,7 @@
 
 
 .box a:hover {
-  background-color: #007BFF;
+  background-color: var(--home);
   padding: 10px;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .nav-link:hover {
-  color: #87a7ff;
+  color: var(--home);
 }
 
 .login-button button {
@@ -124,7 +124,7 @@
     padding: 10px 15px;
     border-radius: 5px;
     margin-top: 13px;
-    background-color: #3e5bd2;
+    background-color: var(--home);
     transition: var(--tran-02);
 }
 
@@ -164,7 +164,7 @@
 }
 
 .mobile-menu-icon button:hover {
-  background-color: #0056b3;
+  background-color: var(--home);
 }
 
 @media screen and (max-width: 1000px) {   
@@ -190,7 +190,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin-top: -90px;
+        margin-top: -20px;
         padding-bottom: 1rem;
     }
     .mobile-menu .nav-item {
@@ -207,7 +207,7 @@
     }
     .open {
         display: block;
-        margin-bottom: 60px;
+
     }
 }
   
@@ -231,7 +231,7 @@
   }
 
   .menu li a:hover {
-    color: #6db8f5;
+    color: var(--home);
   }
   
   .menu .button {
@@ -242,71 +242,35 @@
     border-radius: 100px;
   }
   
-  .hero {
+  .homee-container {
     background: url("img/unnamed.jpg");
-    height: 100vh;
     background-position: center;
     background-size: cover;
   }
 
-  .hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.659); /* Ajuste o último valor (0.5) para mudar a intensidade */
-}
+  .homee-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 150px;
+  }
   
   .hero-content {
-    max-width: 50%;
-    margin-left: 100px;
-    margin-top: 0px;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   
   .hero-content h1 {
-    font-size: 2.9em;
-    margin-bottom: 40px;
-    margin-left: -50px;
+    font-size: 3.9em;
+    margin-bottom: 30px;
+    color: white;
   }
   
   .hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
-  
-  .cta-button {
-    background-color: var(--principal2);
-    color: var(--white);
-    padding: 10px 50px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    margin-left: -50px;
-    font-size: 20px;
-    margin-bottom: 100px;
-    transition: var(--tran-02);
-  }
-  
-  .hero-image {
-    position: relative; /* Torna o contêiner relativo para controlar o posicionamento dos filhos */
-    display: inline-block; /* Mantém o contêiner ajustado ao tamanho do conteúdo */
-    margin-left: 0px;
-  }
-  
-  .hero-image .background {
-    position: absolute; /* Posiciona a imagem decorativa em relação ao contêiner */
-    margin-top: 50px;
-    margin-left: 30px;
-    width: 85%; /* Ajuste o tamanho para ser maior que a imagem principal */
-    z-index: 1; /* Coloca a imagem amarela no fundo */
-  }
-  
-  .hero-image .foreground {
-    position: relative; /* Garante que a imagem principal esteja sobre a decoração */
-    z-index: 2; /* Coloca a imagem principal na frente */
-    border-radius: 10px; /* Bordas arredondadas na imagem principal (opcional) */
-    top: 7px;
+    font-size: 2em;
+    color: white;
   }
 
   .area2{
@@ -366,7 +330,7 @@
 }
 
 .card-icon {
-  background-color: #94d6fd; /* Cor de fundo do ícone */
+  background-color: var(--home); /* Cor de fundo do ícone */
   width: 60px;
   height: 60px;
   display: flex;
@@ -413,7 +377,7 @@
   display: block;
   width: 50px;
   height: 5px;
-  background-color: #f1c40f;
+  background-color: var(--principal2);
   margin: 10px auto 0;
   border-radius: 5px;
 }
@@ -484,7 +448,7 @@
   display: block;
   width: 50px;
   height: 5px;
-  background-color: #f1c40f;
+  background-color: var(--principal2);
   margin: 10px auto 0;
   border-radius: 5px;
 }
@@ -585,7 +549,7 @@ footer {
 }
 
 #facebook {
-  background-color: #4267b3;
+  background-color: #b34242;
 }
 
 #whatsapp {
@@ -684,23 +648,6 @@ footer {
   margin-top: 40px;
 }
 
-  .hero-content {
-    max-width: 50%;
-    margin-left: 100px;
-    margin-top: 0px;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.4em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
-  
-  .hero-content p {
-    font-size: 1em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
   
   .cta-button {
     background-color: var(--principal2);
@@ -723,23 +670,6 @@ footer {
 }
 
 @media screen and (max-width: 1000px) { 
-  .hero-content {
-    max-width: 50%;
-    margin-left: 100px;
-    margin-top: 0px;
-  }
-  
-  .hero-content h1 {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
-  
-  .hero-content p {
-    font-size: 0.8em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
   
   .cta-button {
     background-color: var(--principal2);
@@ -778,23 +708,7 @@ footer {
 }
 
 @media screen and (max-width: 720px) { 
-  .hero-content {
-    max-width: 50%;
-    margin-left: 100px;
-    margin-top: 0px;
-  }
   
-  .hero-content h1 {
-    font-size: 1em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
-  
-  .hero-content p {
-    font-size: 0.5em;
-    margin-bottom: 40px;
-    margin-left: -50px;
-  }
   
   .cta-button {
     background-color: var(--principal2);
@@ -834,6 +748,25 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+  .homee-container section {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  
   .card {
     width: 100%;
   }
@@ -884,3 +817,32 @@ footer {
 
 }
 
+@media screen and (max-width: 426px) {
+  .homee-container section {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .hero-content p {
+    font-size: 1em;
+    color: white;
+  }
+  
+}
+
+@media screen and (max-width: 350px) {
+  .homee-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 40px;
+  }
+}

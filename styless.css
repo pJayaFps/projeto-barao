@@ -227,7 +227,7 @@ label {
 
 /* Campos de entrada */
 input, textarea {
-    width: 73.59em;
+    width: 98%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -244,9 +244,13 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 0px;
     cursor: pointer;
     transition: background 0.3s;
+}
+
+form button {
+    font-size: 16px;
 }
 
 button:hover {
@@ -260,19 +264,36 @@ input[type="radio"] {
 }
 
 /* Responsividade */
-@media (max-width: 500px) {
+@media (max-width: 1920px) {
     .container {
-        width: 90%;
+        width: 80%;
     }
 }
 
 /* Estilizando o textarea */
 textarea {
-    width: 73.59em;
     height: 150px; /* Defina a altura fixa desejada */
     resize: none; /* Impede o redimensionamento */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 74%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .container {
+        width: 50%;
+    }
 }

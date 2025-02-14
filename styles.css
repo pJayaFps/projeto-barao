@@ -605,7 +605,7 @@ footer {
 }
 
 .footer-list .footer-link:hover {
-  color: #7f37c9;
+  color: var(--home);
 }
 
 #footer_subscribe {

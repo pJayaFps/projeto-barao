@@ -115,13 +115,14 @@ header {
     margin-top: 13px;
     background-color: #3e5bd2;
     transition: var(--tran-02);
+    cursor: pointer;
 }
 
 .login-button button:hover{
   background-color: #1b3fd2;
 }
 
-.login-button button a {
+.login-button button {
     text-decoration: none;
     color: #fff;
     font-weight: 500;

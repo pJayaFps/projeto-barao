@@ -140,18 +140,13 @@ header {
   transition: var(--tran-04);
 }
 
-.mobile-menu-icon button:hover {
-  background-color: var(--home);
-}
-
-
 .mobile-menu {
     display: none;
 }
 
 @media screen and (max-width: 1000px) {   
     .nav-bar {
-        padding: 1.5rem 4rem;
+        padding: 0.8rem 4rem;
     }
     .nav-item {
         display: none;

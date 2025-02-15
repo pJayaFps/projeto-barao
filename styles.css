@@ -126,6 +126,7 @@
     margin-top: 13px;
     background-color: var(--home);
     transition: var(--tran-02);
+    cursor: pointer;
 }
 
 .login-button button:hover{
@@ -163,13 +164,11 @@
   border-radius: 10px;
 }
 
-.mobile-menu-icon button:hover {
-  background-color: var(--home);
-}
+
 
 @media screen and (max-width: 1000px) {   
     .nav-bar {
-        padding: 1.5rem 4rem;
+        padding: 0rem 4rem;
     }
     .nav-item {
         display: none;

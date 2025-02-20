@@ -11,7 +11,7 @@
     --body-color: #333;
     --bloco: #f5f5f5;
     --principal: #f9fafc;
-    --home: #629cff;
+    --home: #0047c2;
     --main: #202023;
     --principal2: #f1c40f;
     --white: #fff;
@@ -113,13 +113,13 @@ header {
     padding: 10px 15px;
     border-radius: 5px;
     margin-top: 13px;
-    background-color: #3e5bd2;
+    background-color: var(--home);
     transition: var(--tran-02);
     cursor: pointer;
 }
 
 .login-button button:hover{
-  background-color: #1b3fd2;
+  background-color: #00286d;
 }
 
 .login-button button {
@@ -249,7 +249,7 @@ form button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #007BFF;
+    background-color: var(--home);
     color: white;
     border: none;
     border-radius: 5px;
@@ -263,7 +263,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #00286d;
 }
 
 /* Estilizando os botões de rádio */

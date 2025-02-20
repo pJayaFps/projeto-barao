@@ -6,7 +6,6 @@
     --principal: #f9fafc;
     --home: #0047c2;
     --main: #202023;
-    --principal2: #f1c40f;
     --white: #fff;
     --black: #000;
 
@@ -116,7 +115,7 @@
 }
 
 .nav-link:hover {
-  color: var(--home);
+  color: #87a7ff;
 }
 
 .login-button button {
@@ -125,12 +124,12 @@
     border-radius: 5px;
     margin-top: 13px;
     background-color: var(--home);
-    transition: var(--tran-02);
+    transition: var(--tran-03);
     cursor: pointer;
 }
 
 .login-button button:hover{
-  background-color: #1b3fd2;
+  background-color: #00286d;
 }
 
 .login-button button {
@@ -376,7 +375,7 @@
   display: block;
   width: 50px;
   height: 5px;
-  background-color: var(--principal2);
+  background-color: var(--home);
   margin: 10px auto 0;
   border-radius: 5px;
 }
@@ -424,14 +423,10 @@
 }
 
 .cta-section {
-  background: var(--principal2);
   color: #fff;
   text-align: center;
   padding: 60px 20px;
   border-radius: 10px;
-  max-width: 61%;
-  margin: 50px auto;
-
   }
 
 .bloc h2 {
@@ -447,14 +442,15 @@
   display: block;
   width: 50px;
   height: 5px;
-  background-color: var(--principal2);
+  background-color: var(--home);
   margin: 10px auto 0;
   border-radius: 5px;
 }
 
 .conteudo p {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  color: var(--body-color);
 }
 
 form {
@@ -466,17 +462,18 @@ form {
 
 .conteudo input {
   width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 5px 0 15px;
+  max-width: 500px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-bottom: 2px solid #a8a8a8;
   outline: none;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 50px;
+  background: transparent;
 }
 
 .conteudo button {
-  background: #ff9800;
+  background: var(--home);
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -490,7 +487,7 @@ form {
 }
 
 .conteudo button:hover {
-  background: #e68900;
+  background: #00286d;
 }
 
 

@@ -437,7 +437,7 @@
 .bloc h2 {
   font-size: 40px;
   margin-top: 20px;
-  color: var(--home);
+  color: var(--body-color);
   text-align: center;
   font-weight: 600;
 }

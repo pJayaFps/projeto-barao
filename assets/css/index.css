@@ -241,7 +241,7 @@
   }
   
   .homee-container {
-    background: url("img/unnamed.jpg");
+    background: url("/assets/img/unnamed.jpg");
     background-position: center;
     background-size: cover;
   }

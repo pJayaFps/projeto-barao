@@ -1,12 +1,31 @@
 {
   "name": "projeto-barao",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bem-vindo ao repositório do projeto do site oficial da **Escola PEI Barão de Jundiaí**. Este site está sendo desenvolvido por [Nathan](https://github.com/pJayaFps) e [Pedro](https://github.com/Magcizz), com o objetivo de oferecer uma plataforma digital moderna e informativa para a comunidade escolar.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/react-query": "^5.75.5",
+    "lucide-react": "^0.508.0",
+    "react": "^19.1.0",
+    "tailwind": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pJayaFps/projeto-barao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pJayaFps/projeto-barao/issues"
+  },
+  "homepage": "https://github.com/pJayaFps/projeto-barao#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.5"
+  }
 }

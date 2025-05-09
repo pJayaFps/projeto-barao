@@ -1,30 +1,1444 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PEI Barão de Jundiaí - Infraestrutura</title>
-    <meta name="description" content="Conheça a infraestrutura da Escola PEI Barão de Jundiaí, com instalações modernas para o desenvolvimento integral dos alunos." />
+    <meta name="description"
+        content="Conheça a infraestrutura da Escola PEI Barão de Jundiaí, com instalações modernas para o desenvolvimento integral dos alunos." />
     <meta name="author" content="PEI Barão de Jundiaí" />
 
     <meta property="og:title" content="PEI Barão de Jundiaí - Infraestrutura" />
-    <meta property="og:description" content="Conheça a infraestrutura da Escola PEI Barão de Jundiaí, com instalações modernas para o desenvolvimento integral dos alunos." />
+    <meta property="og:description"
+        content="Conheça a infraestrutura da Escola PEI Barão de Jundiaí, com instalações modernas para o desenvolvimento integral dos alunos." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@peibaraojundiai" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="/assets/css/index.css">
 
-  <body>
-    <div id="root"></div>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+</head>
+<style>
+    :root {
+        --body-color: #333;
+        --bloco: #f5f5f5;
+        --principal: #f9fafc;
+        --home: #0047c2;
+        --main: #202023;
+        --white: #fff;
+        --black: #000;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        color: var(--body-color);
+        background-color: var(--principal);
+        line-height: 1.6;
+    }
+
+    
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        height: 700px;
+        top: -80px;
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+        background-color: var(--principal);
+        z-index: -1;
+    }
+
+    .bg-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(0, 28, 77, 0.822) 0%, rgba(0, 71, 194, 0.116) 100%);
+        z-index: 0;
+    }
+
+    .hero .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        flex: 1;
+        max-width: 600px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+
+    }
+
+    .hero h1 .text-home {
+        color: var(--home);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s;
+        text-align: center;
+    }
+
+    .btn-primary {
+        background-color: var(--home);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-primary:hover {
+        background-color: #003ba1;
+        transform: translateY(-2px);
+    }
+
+    .btn-outline {
+        border: 2px solid var(--home);
+        color: var(--home);
+    }
+
+    .btn-outline:hover {
+        background-color: var(--home);
+        color: var(--white);
+        transform: translateY(-2px);
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .scroll-indicator a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--home);
+        font-size: 0.9rem;
+        font-weight: 500;
+        animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator i {
+        margin-top: 8px;
+        font-size: 1.2rem;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-10px);
+        }
+
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    /* About Section */
+    .about {
+        padding: 80px 0;
+        background-color: var(--bloco);
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background-color: var(--home);
+    }
+
+    .about-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .about-card {
+        background-color: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .about-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 71, 194, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .card-icon i {
+        font-size: 1.8rem;
+        color: var(--home);
+    }
+
+    .about-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .about-pei {
+        background-color: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-pei h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .about-pei p {
+        margin-bottom: 20px;
+    }
+
+    .pei-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+    }
+
+    .pei-features li {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .pei-features i {
+        color: var(--home);
+        margin-right: 10px;
+        margin-top: 4px;
+        flex-shrink: 0;
+    }
+
+    /* Facilities Section */
+    .facilities {
+        padding: 80px 0;
+        background-color: var(--principal);
+    }
+
+    .facilities-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+    }
+
+    .facilities-sidebar {
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .sidebar-content {
+        padding: 30px;
+    }
+
+    .sidebar-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .sidebar-content p {
+        margin-bottom: 20px;
+    }
+
+    .facilities-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .facility-btn {
+        width: 100%;
+        text-align: left;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+    }
+
+    .facility-btn:hover {
+        background-color: var(--bloco);
+    }
+
+    .facility-btn.active {
+        background-color: var(--home);
+        color: var(--white);
+    }
+
+    .facilities-display {
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .facility-content {
+        display: none;
+    }
+
+    .facility-content.active {
+        display: block;
+    }
+
+    .facility-image {
+        position: relative;
+        height: 250px;
+    }
+
+    .facility-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .facility-image h3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+        color: var(--white);
+        font-size: 1.5rem;
+    }
+
+    .facility-details {
+        padding: 30px;
+    }
+
+    .facility-details p {
+        margin-bottom: 25px;
+    }
+
+    .facility-details h4 {
+        margin-bottom: 15px;
+    }
+
+    .facility-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .facility-features li {
+        display: flex;
+        align-items: center;
+    }
+
+    .facility-features i {
+        color: var(--home);
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    /* Gallery Section */
+    .gallery {
+        padding: 80px 0;
+        background-color: var(--bloco);
+    }
+
+    .gallery-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        padding: 8px 20px;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--white);
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+    }
+
+    .filter-btn:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .filter-btn.active {
+        background-color: var(--home);
+        color: var(--white);
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        height: 220px;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        transform: translateY(100%);
+        transition: transform 0.3s;
+    }
+
+    .gallery-overlay p {
+        color: var(--white);
+        margin: 0;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1100;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+
+    .modal-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1200;
+    }
+
+    .modal-prev,
+    .modal-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: none;
+    }
+
+    .modal-next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .modal-prev {
+        left: 0;
+    }
+
+    .modal-prev:hover,
+    .modal-next:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Map Section */
+    .map-section {
+        padding: 80px 0;
+        background-color: var(--principal);
+    }
+
+    .map-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .map-info {
+        height: 100%;
+    }
+
+    .info-card {
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .contact-item {
+        display: flex;
+        margin-bottom: 25px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 71, 194, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .contact-icon i {
+        font-size: 1.3rem;
+        color: var(--home);
+    }
+
+    .contact-details h4 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .schedule-box {
+        background-color: var(--bloco);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: auto;
+    }
+
+    .schedule-box h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .schedule-box ul li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .map-iframe {
+        height: 100%;
+        min-height: 450px;
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .map-iframe iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .directions {
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+    }
+
+    .directions h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .directions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .direction-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: var(--white);
+        transition: background-color 0.3s;
+    }
+
+    .social-icon:hover {
+        background-color: var(--home);
+    }
+
+    #back-to-top {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #back-to-top:hover {
+        background-color: var(--home);
+    }
+
+    /* Animation classes */
+    .facility-card,
+    .gallery-item,
+    .section-title,
+    .about-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .facility-card.animate,
+    .gallery-item.animate,
+    .section-title.animate,
+    .about-card.animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .section-title.animate::after {
+        width: 80px;
+        transition: width 0.5s ease 0.3s;
+    }
+
+    .section-title::after {
+        width: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text {
+            max-width: 100%;
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .facilities-container {
+            grid-template-columns: 1fr;
+        }
+
+        .map-container {
+            grid-template-columns: 1fr;
+        }
+
+        .map-iframe {
+            min-height: 350px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .hero {
+            height: auto;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .scroll-indicator {
+            bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .facility-features {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero {
+            padding: 40px 0;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .gallery-filter {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .filter-btn {
+            width: 100%;
+        }
+
+        .directions-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="/assets/img/logobaraobranco.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Nossa Escola</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Áreas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Calendário</a></li>
+                    <li class="nav-item"><a href="https://saladofuturo.educacao.sp.gov.br" target="_blank"
+                            class="nav-link">Sala do Futuro</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="parcerias">Parcerias</a>
+                        <div class="box" id="box">
+                            <a href="cijun.html" target="_blank">Cijun</a>
+                            <a href="simens.html" target="_blank">Simens</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="login-button">
+                <button onclick="window.location.href='faleconosco.html'">Fale Conosco</button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="../menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Nossa Escola</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Áreas</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Calendário</a></li>
+                <li class="nav-item"><a href="https://saladofuturo.educacao.sp.gov.br" target="_blank"
+                        class="nav-link">Sala do Futuro</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Parcerias</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button onclick="window.location.href='faleconosco.html'">Fale Conosco</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="bg-gradient"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Conheça a Infraestrutura da <span class="text-home">PEI Barão de Jundiaí</span></h1>
+                    <p>Uma escola de referência com instalações modernas e ambiente propício para aprendizagem e
+                        desenvolvimento integral dos alunos.</p>
+                    <div class="hero-buttons">
+                        <a href="#facilities" class="btn btn-primary">Ver Instalações <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-outline">Fale Conosco</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Fachada da Escola PEI Barão de Jundiaí">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre a Escola</h2>
+
+            <div class="about-cards">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Nossa História</h3>
+                    <p>
+                        Fundada em 1953, a Escola Estadual Barão de Jundiaí tem uma longa trajetória de excelência no
+                        ensino. Em 2021,
+                        passou a integrar o Programa de Ensino Integral (PEI), oferecendo educação em tempo integral
+                        para nossos alunos.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Nossa Missão</h3>
+                    <p>
+                        A PEI Barão de Jundiaí tem como missão formar cidadãos críticos e preparados para os desafios do
+                        século XXI,
+                        por meio de uma educação integral que valoriza tanto o conhecimento acadêmico como o
+                        desenvolvimento socioemocional.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Localização</h3>
+                    <p>
+                        Estrategicamente localizada na região central de Jundiaí, nossa escola é de fácil acesso por
+                        transporte
+                        público e oferece uma estrutura completa para atender as necessidades pedagógicas dos alunos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-pei">
+                <h3>Programa de Ensino Integral (PEI)</h3>
+                <p>
+                    O Programa de Ensino Integral (PEI) representa uma importante política educacional do Estado de São
+                    Paulo,
+                    oferecendo aos estudantes uma jornada ampliada com currículo integrado, permitindo:
+                </p>
+
+                <ul class="pei-features">
+                    <li><i class="fas fa-check"></i>Jornada de estudos completa, das 7h30 às 16h30</li>
+                    <li><i class="fas fa-check"></i>Disciplinas da Base Nacional Comum Curricular</li>
+                    <li><i class="fas fa-check"></i>Projeto de Vida como centro da proposta pedagógica</li>
+                    <li><i class="fas fa-check"></i>Tutoria para acompanhamento individualizado</li>
+                    <li><i class="fas fa-check"></i>Clubes Juvenis e eletivas diversificadas</li>
+                    <li><i class="fas fa-check"></i>Tecnologia e Inovação como componente curricular</li>
+                    <li><i class="fas fa-check"></i>Protagonismo estudantil e desenvolvimento socioemocional</li>
+                    <li><i class="fas fa-check"></i>Infraestrutura adaptada para permanência em tempo integral</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <h2 class="section-title">Nossas Instalações</h2>
+
+            <div class="facilities-container">
+                <div class="facilities-sidebar">
+                    <div class="sidebar-content">
+                        <h3>Explore Nossa Estrutura</h3>
+                        <p>
+                            A PEI Barão de Jundiaí oferece instalações modernas e completas para proporcionar o melhor
+                            ambiente
+                            de aprendizagem aos nossos estudantes.
+                        </p>
+
+                        <div class="facilities-nav">
+                            <button class="facility-btn active" data-facility="classrooms">Salas de Aula</button>
+                            <button class="facility-btn" data-facility="library">Biblioteca</button>
+                            <button class="facility-btn" data-facility="lab">Laboratórios</button>
+                            <button class="facility-btn" data-facility="tech">Lab. de Informática</button>
+                            <button class="facility-btn" data-facility="sports">Área Esportiva</button>
+                            <button class="facility-btn" data-facility="refectory">Refeitório</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilities-display">
+                    <div class="facility-content active" id="classrooms">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Salas de Aula">
+                            <h3>Salas de Aula</h3>
+                        </div>
+                        <div class="facility-details">
+                            <p>
+                                Nossas salas de aula são equipadas com projetores, ar-condicionado e mobiliário
+                                ergonômico para garantir o conforto e aprendizado dos alunos.
+                            </p>
+                            <h4>Características:</h4>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i>Equipadas com tecnologia audiovisual</li>
+                                <li><i class="fas fa-check"></i>Iluminação natural ampla</li>
+                                <li><i class="fas fa-check"></i>Capacidade para 35 alunos</li>
+                                <li><i class="fas fa-check"></i>Climatizadas e ventiladas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="facility-content" id="library">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Biblioteca">
+                            <h3>Biblioteca</h3>
+                        </div>
+                        <div class="facility-details">
+                            <p>
+                                Nossa biblioteca possui um acervo com mais de 10 mil títulos, espaço para estudos
+                                individuais e em grupo, além de computadores para pesquisa.
+                            </p>
+                            <h4>Características:</h4>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i>Acervo digital e físico</li>
+                                <li><i class="fas fa-check"></i>Salas de estudo em grupo</li>
+                                <li><i class="fas fa-check"></i>Ambiente tranquilo para leitura</li>
+                                <li><i class="fas fa-check"></i>Wi-Fi de alta velocidade</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="facility-content" id="lab">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laboratórios">
+                            <h3>Laboratórios</h3>
+                        </div>
+                        <div class="facility-details">
+                            <p>
+                                Contamos com laboratórios de ciências, física, química e biologia, todos equipados com
+                                materiais necessários para aulas práticas e experimentos.
+                            </p>
+                            <h4>Características:</h4>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i>Equipamentos modernos</li>
+                                <li><i class="fas fa-check"></i>Bancadas para trabalho em grupo</li>
+                                <li><i class="fas fa-check"></i>Materiais para experimentos</li>
+                                <li><i class="fas fa-check"></i>Supervisão especializada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="facility-content" id="tech">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1581472723648-909f4851d4ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laboratório de Informática">
+                            <h3>Lab. de Informática</h3>
+                        </div>
+                        <div class="facility-details">
+                            <p>
+                                Nosso laboratório de informática possui computadores de última geração, softwares
+                                educacionais e acesso à internet para atividades pedagógicas.
+                            </p>
+                            <h4>Características:</h4>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i>Computadores modernos</li>
+                                <li><i class="fas fa-check"></i>Softwares educacionais</li>
+                                <li><i class="fas fa-check"></i>Internet de alta velocidade</li>
+                                <li><i class="fas fa-check"></i>Suporte técnico disponível</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="facility-content" id="sports">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1527871369852-eb58cb2b54e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Área Esportiva">
+                            <h3>Área Esportiva</h3>
+                        </div>
+                        <div class="facility-details">
+                            <p>
+                                Nossa infraestrutura esportiva inclui quadra poliesportiva coberta, campo de futebol,
+                                vestiários e materiais para diversas modalidades esportivas.
+                            </p>
+                            <h4>Características:</h4>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i>Quadra poliesportiva coberta</li>
+                                <li><i class="fas fa-check"></i>Campo de futebol</li>
+                                <li><i class="fas fa-check"></i>Vestiários completos</li>
+                                <li><i class="fas fa-check"></i>Equipamentos esportivos diversos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="facility-content" id="refectory">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Refeitório">
+                            <h3>Refeitório</h3>
+                        </div>
+                        <div class="facility-details">
+                            <p>
+                                Nosso refeitório amplo e arejado oferece alimentação balanceada e nutritiva para todos
+                                os estudantes durante o período integral.
+                            </p>
+                            <h4>Características:</h4>
+                            <ul class="facility-features">
+                                <li><i class="fas fa-check"></i>Refeições balanceadas e nutritivas</li>
+                                <li><i class="fas fa-check"></i>Ambiente amplo e arejado</li>
+                                <li><i class="fas fa-check"></i>Capacidade para 200 alunos</li>
+                                <li><i class="fas fa-check"></i>Equipe de nutrição especializada</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galeria de Fotos</h2>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="interior">Interiores</button>
+                <button class="filter-btn" data-filter="exterior">Exteriores</button>
+                <button class="filter-btn" data-filter="laboratorios">Laboratórios</button>
+                <button class="filter-btn" data-filter="esporte">Esportes</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Fachada da Escola">
+                    <div class="gallery-overlay">
+                        <p>Fachada da Escola</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Sala de Aula Moderna">
+                    <div class="gallery-overlay">
+                        <p>Sala de Aula Moderna</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="laboratorios">
+                    <img src="https://images.unsplash.com/photo-1570975640108-5b13a5c3f919?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Laboratório de Ciências">
+                    <div class="gallery-overlay">
+                        <p>Laboratório de Ciências</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Biblioteca">
+                    <div class="gallery-overlay">
+                        <p>Biblioteca</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="esporte">
+                    <img src="https://images.unsplash.com/photo-1533956071364-c8d8b8ff3694?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Quadra Poliesportiva">
+                    <div class="gallery-overlay">
+                        <p>Quadra Poliesportiva</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="laboratorios">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Laboratório de Informática">
+                    <div class="gallery-overlay">
+                        <p>Laboratório de Informática</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="exterior">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Área de Convivência">
+                    <div class="gallery-overlay">
+                        <p>Área de Convivência</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Refeitório">
+                    <div class="gallery-overlay">
+                        <p>Refeitório</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="image-modal" class="modal">
+                <span class="modal-close">&times;</span>
+                <img class="modal-content" id="modal-img">
+                <div class="modal-caption"></div>
+                <button class="modal-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="modal-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2 class="section-title">Localização</h2>
+
+            <div class="map-container">
+                <div class="map-info">
+                    <div class="info-card">
+                        <h3>Informações de Contato</h3>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Endereço</h4>
+                                <p>
+                                    Av. Jacinto Nalini, 451<br>
+                                    Jardim Sagrado Coracao
+                                    de Jesus, Jundiaí - SP<br>
+                                    CEP: 13219-630
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefone</h4>
+                                <p>
+                                    (11) 9999-9999<br>
+                                    (11) 9999-9999
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>
+                                    contato@eebaraojundiai.sp.gov.br<br>
+                                    secretaria@eebaraojundiai.sp.gov.br
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="schedule-box">
+                            <h4>Horário de Funcionamento</h4>
+                            <ul>
+                                <li><span>Segunda a Sexta:</span><span>7:00 - 21:30</span></li>
+                                <li><span>Secretaria:</span><span>7:00 - 21:30</span></li>
+                                <li><span>Sábados e Domingos:</span><span>Fechado</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-iframe">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.680055288415!2d-46.85174072447351!3d-23.181874547760668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf2715e0277261%3A0x25000f3c2eafb6b0!2sAv.%20Jacinto%20Nalini%2C%20451%20-%20Jardim%20Sagrado%20Coracao%20de%20Jesus%2C%20Jundia%C3%AD%20-%20SP%2C%2013219-630!5e0!3m2!1spt-BR!2sbr!4v1746758224243!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        allowfullscreen="" loading="lazy"
+                        title="Mapa da localização da Escola PEI Barão de Jundiaí"></iframe>
+                </div>
+            </div>
+
+            <div class="directions">
+                <h3>Como Chegar</h3>
+
+                <div class="directions-grid">
+                    <div class="direction-item">
+                        <h4>De Ônibus</h4>
+                        <p>
+                            A escola é atendida por uma linha de ônibus de Jundiaí. A linha que passa
+                            pela Av. Jacinto Nalini ou pelas proximidades do Jardim Sagrado Coração de Jesus é o 554 - JD CARPAS. 
+                        </p>
+                    </div>
+
+                    <div class="direction-item">
+                        <h4>De Carro</h4>
+                        <p>
+                            Acesso fácil pela Rodovia Anhanguera e pela Via Expressa.
+                            A escola possui estacionamento para professores e área de embarque/desembarque para alunos.
+                        </p>
+                    </div>
+
+                    <div class="direction-item">
+                        <h4>A Pé</h4>
+                        <p>
+                            A escola está localizada a 10 minutos a pé do centro da cidade e a 15 minutos
+                            da estação de trem, oferecendo fácil acesso para pedestres.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <img src="/assets/img/logobaraobranco.png" alt="">
+                <p>PEI Barão de Jundiaí</p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/peibaraodejundiai/" target="_blank" class="footer-link"
+                        id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=e019732a@educacao.sp.gov.br" target="_blank"
+                        class="footer-link" id="facebook">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <a href="https://wa.me/5511910274790?text=Olá, gostaria de um atendimento!" target="_blank"
+                        class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Sobre a Escola</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Quem somos?</a>
+                </li>
+                <li>
+                    <a href="https://saladofuturo.educacao.sp.gov.br" target="_blank" class="footer-link">Sala do
+                        Futuro</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Atendimento</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Atendimento</a>
+                </li>
+                <li>
+                    <a href="faleconosco.html" class="footer-link">Entre em contato conosco</a>
+                </li>
+            </ul>
+
+            <div id="footer-contato">
+                <h3>Contato</h3>
+
+                <p>📍 Av. Jacinto Nalini, 451 <br> Jardim Sagrado Coracao <br> de Jesus, Jundiaí <br> SP, 13219-630,
+                    Brazil</p>
+
+            </div>
+
+            <div id="footer_subscribe">
+                <h3>Inscrever-se</h3>
+
+                <p>
+                    Digite seu e-mail para entrar em contato conosco e receber atualizações sobre nossas novidades e
+                    informações importantes.
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email" placeholder="E-mail">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2025 Escola Barão de Jundiaí. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="/assets/js/script2.js"></script>
+</body>
+
 </html>

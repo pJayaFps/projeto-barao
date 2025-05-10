@@ -79,6 +79,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 6rem;
+
 }
 
 .logo {
@@ -353,6 +354,27 @@
   margin: 0;
   font-size: 0.9rem;
   color: #666;
+}
+
+
+.card button {
+  border: none;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.card button a {
+  text-decoration: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--home);
+  color: #fff;
+  transition: var(--tran-04);
+}
+
+.card button a:hover{
+  background-color: #002c77;
 }
 
 /* BLOCO 3 */

@@ -9,17 +9,3 @@ function menuShow() {
     }
 }
 
-const parceriasLink = document.getElementById('parcerias');
-const box = document.getElementById('box')
-
-parceriasLink.addEventListener('mouseover', function() {
-    box.style.display = 'block'; // Exibe a box
-});
-
-// Função para ocultar a box com transição
-parceriasLink.addEventListener('mouseout', function() {
-    setTimeout(() => {
-        box.style.display = 'none';
-    }, 5000);
-});
-

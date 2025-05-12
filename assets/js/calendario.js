@@ -23,11 +23,11 @@ let isLoggedIn = false;
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   setupUsers();
+  checkLoginStatus();
   loadEvents();
   setupEventListeners();
   initNotifications();
   renderCalendar(); // mostra o calendário logo
-  showLoginButton(); // adiciona botão de login
 });
 
 function menuShow() {
@@ -125,14 +125,14 @@ function closeLoginModal() {
 
 function checkLoginStatus() {
   // Check if user is logged in from session storage
-  const userStr = sessionStorage.getItem('currentUser');
+  const userStr = localStorage.getItem('currentUser');
   if (userStr) {
     currentUser = JSON.parse(userStr);
     isLoggedIn = true;
     showLoggedInUI();
   } else {
-    showLoginForm();
-  }
+    showLoginButton();
+  } 
 }
 
 function login(username, password) {
@@ -143,7 +143,7 @@ function login(username, password) {
     currentUser = user;
     isLoggedIn = true;
     // Store in session storage
-    sessionStorage.setItem('currentUser', JSON.stringify(user));
+    localStorage.setItem('currentUser', JSON.stringify(user));
     showLoggedInUI();
     showToast({
       title: 'Login bem sucedido',
@@ -164,7 +164,7 @@ function login(username, password) {
 function logout() {
   currentUser = null;
   isLoggedIn = false;
-  sessionStorage.removeItem('currentUser');
+  localStorage.removeItem('currentUser');
   showToast({
     title: 'Logout concluído',
     description: 'Você foi desconectado',
@@ -632,7 +632,7 @@ function updateUser(e) {
   // If current user was updated, update session storage too
   if (currentUser.username === originalUsername) {
     currentUser = users[userIndex];
-    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
   }
   
   showToast({
@@ -1230,7 +1230,7 @@ function openEventForm() {
   titleInput.focus();
 }
 
-function handleSaveEvent(e) {
+async function handleSaveEvent(e) {
   e.preventDefault();
   
   // Check if user can edit
@@ -1273,49 +1273,24 @@ function handleSaveEvent(e) {
   };
   
   if (eventToEdit) {
-    // Update existing event
-    events = events.map(e => e.id === newEvent.id ? newEvent : e);
-    showToast({
-      title: 'Evento atualizado',
-      description: 'O evento foi atualizado com sucesso.',
-      type: 'success'
-    });
-  } else {
-    // Add new event
-    events.push(newEvent);
-    showToast({
-      title: 'Evento adicionado',
-      description: 'O evento foi adicionado ao seu calendário.',
-      type: 'success'
-    });
+    await handleDeleteEvent(eventToEdit.id); // remove o anterior
   }
+
+  await fetch('http://localhost:3000/events', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(newEvent)
+  });
+
   
-  saveEvents();
   closeModal();
-  renderCalendar();
+  loadEvents();
 }
 
-function handleDeleteEvent(id) {
-  // Check if user can edit
-  if (!currentUser?.canEdit) {
-    showToast({
-      title: 'Acesso negado',
-      description: 'Você não tem permissão para excluir eventos',
-      type: 'error'
-    });
-    return;
-  }
-  
-  events = events.filter(event => event.id !== id);
-  saveEvents();
+async function handleDeleteEvent(id) {
+  await fetch(`http://localhost:3000/events/${id}`, { method: 'DELETE' });
   closeModal();
-  renderCalendar();
-  
-  showToast({
-    title: 'Evento excluído',
-    description: 'O evento foi removido do seu calendário.',
-    type: 'error'
-  });
+  loadEvents();
 }
 
 function closeModal() {
@@ -1381,20 +1356,14 @@ function showToast({ title, description, duration = 3000, type = 'info' }) {
 }
 
 // Data Persistence
-function saveEvents() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(events));
+async function saveEvents() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(events)); // opcional como cache
 }
 
-function loadEvents() {
-  const savedEvents = localStorage.getItem(STORAGE_KEY);
-  if (savedEvents) {
-    try {
-      events = JSON.parse(savedEvents);
-    } catch (e) {
-      console.error('Error parsing saved events:', e);
-      events = [];
-    }
-  }
+async function loadEvents() {
+  const response = await fetch('http://localhost:3000/events');
+  events = await response.json();
+  renderCalendar();
 }
 
 // Utility Functions

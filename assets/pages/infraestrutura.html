@@ -57,7 +57,7 @@
         line-height: 1.6;
     }
 
-    
+
 
     a {
         text-decoration: none;
@@ -154,7 +154,7 @@
         gap: 15px;
     }
 
-    
+
 
     .btn {
         display: inline-block;
@@ -1319,7 +1319,9 @@
 
                 <div class="map-iframe">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.680055288415!2d-46.85174072447351!3d-23.181874547760668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf2715e0277261%3A0x25000f3c2eafb6b0!2sAv.%20Jacinto%20Nalini%2C%20451%20-%20Jardim%20Sagrado%20Coracao%20de%20Jesus%2C%20Jundia%C3%AD%20-%20SP%2C%2013219-630!5e0!3m2!1spt-BR!2sbr!4v1746758224243!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.680055288415!2d-46.85174072447351!3d-23.181874547760668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf2715e0277261%3A0x25000f3c2eafb6b0!2sAv.%20Jacinto%20Nalini%2C%20451%20-%20Jardim%20Sagrado%20Coracao%20de%20Jesus%2C%20Jundia%C3%AD%20-%20SP%2C%2013219-630!5e0!3m2!1spt-BR!2sbr!4v1746758224243!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                         allowfullscreen="" loading="lazy"
                         title="Mapa da localização da Escola PEI Barão de Jundiaí"></iframe>
                 </div>
@@ -1333,7 +1335,8 @@
                         <h4>De Ônibus</h4>
                         <p>
                             A escola é atendida por uma linha de ônibus de Jundiaí. A linha que passa
-                            pela Av. Jacinto Nalini ou pelas proximidades do Jardim Sagrado Coração de Jesus é o 554 - JD CARPAS. 
+                            pela Av. Jacinto Nalini ou pelas proximidades do Jardim Sagrado Coração de Jesus é o 554 -
+                            JD CARPAS.
                         </p>
                     </div>
 
@@ -1439,5 +1442,21 @@
 
     <script src="/assets/js/script2.js"></script>
 </body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyCUKv8y1trSUj3p_hKv49dsfBfUIEgvdiA",
+        authDomain: "calendario-escolar-d3786.firebaseapp.com",
+        projectId: "calendario-escolar-d3786",
+        storageBucket: "calendario-escolar-d3786.firebasestorage.app",
+        messagingSenderId: "868256910495",
+        appId: "1:868256910495:web:f59ca87502e5fe0feb66aa"
+    };
+
+    window.firebaseApp = initializeApp(firebaseConfig);
+    window.db = getFirestore(firebaseApp);
+</script>
 
 </html>
